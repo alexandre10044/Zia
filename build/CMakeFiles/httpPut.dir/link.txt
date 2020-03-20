@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libhttpPut.so -o modules/libhttpPut.so CMakeFiles/httpPut.dir/modules/httpPut/httpPut.cpp.o  libopenZia.a -ldl -lstdc++fs 

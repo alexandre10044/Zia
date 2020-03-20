@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libsslDecrypt.so -o modules/libsslDecrypt.so CMakeFiles/sslDecrypt.dir/modules/sslDecrypt/sslDecrypt.cpp.o  libopenZia.a -lssl -lcrypto -ldl -lstdc++fs 

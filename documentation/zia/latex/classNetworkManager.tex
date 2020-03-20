@@ -1,0 +1,269 @@
+\hypertarget{classNetworkManager}{}\section{Network\+Manager Class Reference}
+\label{classNetworkManager}\index{NetworkManager@{NetworkManager}}
+
+
+{\ttfamily \#include $<$Network\+Manager.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNetworkManager_a326a7681ace2029fa6a606def54c066e}{Network\+Manager}} (int port, int protocol)
+\item 
+\mbox{\hyperlink{classNetworkManager_a2cfe4223139cf58587a9f066b956cb23}{$\sim$\+Network\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classNetworkManager_aff763a02730b218f72f51a96a02f0dda}{set\+Other}} (\mbox{\hyperlink{NetworkManager_8hpp_a6a34800fb5689e853f978b485a41aa39}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}} other)
+\item 
+int \mbox{\hyperlink{classNetworkManager_a4ac57f20b56fc1a2898eb9a1f5c7900b}{init}} (int \+\_\+port, int ip\+\_\+protocol)
+\item 
+\mbox{\hyperlink{NetworkManager_8hpp_a6a34800fb5689e853f978b485a41aa39}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}} \mbox{\hyperlink{classNetworkManager_add2dcea7f26b8ff8ac6a5c49d4c956eb}{get\+Other}} ()
+\item 
+int \mbox{\hyperlink{classNetworkManager_ae437a06c3cfa8c7c2df9f7e98f0395bf}{get\+Fd}} ()
+\item 
+void \mbox{\hyperlink{classNetworkManager_a2d7ffe30427c533766b05ca568ffb125}{set\+Fd}} (int fd)
+\item 
+int \mbox{\hyperlink{classNetworkManager_a8c7c31a6fdbc5ed52f8d3bddf16a84e6}{send\+To}} (char buff\mbox{[}\mbox{\hyperlink{NetworkManager_8hpp_a6ac7d11a56af31a55035980e2fed464a}{B\+U\+F\+F\+\_\+\+L\+EN}}\mbox{]}, size\+\_\+t n)
+\item 
+std\+::tuple$<$ struct sockaddr $\ast$, char $\ast$, int $>$ \mbox{\hyperlink{classNetworkManager_a07057dcbe4af4740383384daf8289d5f}{receive\+From}} ()
+\item 
+int \mbox{\hyperlink{classNetworkManager_a1979812356b715646302bf188f74aff5}{T\+C\+P\+\_\+\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em This function contains the main loop.~\newline
+ Is used to accept new \mbox{\hyperlink{classClient}{Client}}.~\newline
+ It also stores them in the \mbox{\hyperlink{classClient}{Client}} class.~\newline
+ And also reads/stores there messages in there.~\newline
+ (It is doing I/O but nothing else)~\newline
+ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNetworkManager_a5765a63a11c9b5ee4dfb1f264ca002eb}{started}} ()
+\begin{DoxyCompactList}\small\item\em Returns the state of the server. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classNetworkManager_aeec2cdb10fa286ccf9170ce3a2192202}{get\+Client\+IP}} (\mbox{\hyperlink{classClient}{Client}} c)
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classClient}{Client}} IP string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{NetworkManager_8hpp_a6a34800fb5689e853f978b485a41aa39}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}} \mbox{\hyperlink{classNetworkManager_af8625dfbba34d3b7683fd6ccf1afb3aa}{\+\_\+other}}
+\begin{DoxyCompactList}\small\item\em Used in U\+DP. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNetworkManager_af3fdb76b224890526f93952bbff33a9a}{\+\_\+fd}}
+\begin{DoxyCompactList}\small\item\em Used in U\+DP. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNetworkManager_aa2c4503597d1a64439912f20a9799ec3}{\+\_\+protocol}}
+\begin{DoxyCompactList}\small\item\em Used to determine which protocol the server is in. \end{DoxyCompactList}\item 
+o\+Z\+::\+Pipeline \mbox{\hyperlink{classNetworkManager_a63ace6e62f363661c718b17a738107dc}{\+\_\+pipeline}}
+\item 
+int \mbox{\hyperlink{classNetworkManager_acf160e0d3b59613ab6ff8084637a79ed}{\+\_\+started}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classClient}{Client}} $>$ \mbox{\hyperlink{classNetworkManager_a267bb2580a6c21a814971a8e74c4dc37}{\+\_\+clients}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used init and manage network 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNetworkManager_a326a7681ace2029fa6a606def54c066e}\label{classNetworkManager_a326a7681ace2029fa6a606def54c066e}} 
+\index{NetworkManager@{NetworkManager}!NetworkManager@{NetworkManager}}
+\index{NetworkManager@{NetworkManager}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{NetworkManager()}{NetworkManager()}}
+{\footnotesize\ttfamily Network\+Manager\+::\+Network\+Manager (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{int}]{protocol }\end{DoxyParamCaption})}
+
+Constructor of the \mbox{\hyperlink{classNetworkManager}{Network\+Manager}} 
+\begin{DoxyParams}{Parameters}
+{\em port} & The port of the network manager \\
+\hline
+{\em protocol} & Either I\+P\+P\+R\+O\+T\+O\+\_\+\+T\+CP $\vert$ I\+P\+P\+R\+O\+T\+O\+\_\+\+U\+DP \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNetworkManager_a2cfe4223139cf58587a9f066b956cb23}\label{classNetworkManager_a2cfe4223139cf58587a9f066b956cb23}} 
+\index{NetworkManager@{NetworkManager}!````~NetworkManager@{$\sim$NetworkManager}}
+\index{````~NetworkManager@{$\sim$NetworkManager}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{$\sim$NetworkManager()}{~NetworkManager()}}
+{\footnotesize\ttfamily Network\+Manager\+::$\sim$\+Network\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor of the \mbox{\hyperlink{classNetworkManager}{Network\+Manager}} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNetworkManager_aeec2cdb10fa286ccf9170ce3a2192202}\label{classNetworkManager_aeec2cdb10fa286ccf9170ce3a2192202}} 
+\index{NetworkManager@{NetworkManager}!getClientIP@{getClientIP}}
+\index{getClientIP@{getClientIP}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{getClientIP()}{getClientIP()}}
+{\footnotesize\ttfamily std\+::string Network\+Manager\+::get\+Client\+IP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classClient}{Client}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classClient}{Client}} IP string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetworkManager_ae437a06c3cfa8c7c2df9f7e98f0395bf}\label{classNetworkManager_ae437a06c3cfa8c7c2df9f7e98f0395bf}} 
+\index{NetworkManager@{NetworkManager}!getFd@{getFd}}
+\index{getFd@{getFd}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{getFd()}{getFd()}}
+{\footnotesize\ttfamily int Network\+Manager\+::get\+Fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The fd of server. \begin{DoxyReturn}{Returns}
+the fd. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetworkManager_add2dcea7f26b8ff8ac6a5c49d4c956eb}\label{classNetworkManager_add2dcea7f26b8ff8ac6a5c49d4c956eb}} 
+\index{NetworkManager@{NetworkManager}!getOther@{getOther}}
+\index{getOther@{getOther}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{getOther()}{getOther()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{NetworkManager_8hpp_a6a34800fb5689e853f978b485a41aa39}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}} Network\+Manager\+::get\+Other (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+server 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetworkManager_a4ac57f20b56fc1a2898eb9a1f5c7900b}\label{classNetworkManager_a4ac57f20b56fc1a2898eb9a1f5c7900b}} 
+\index{NetworkManager@{NetworkManager}!init@{init}}
+\index{init@{init}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Network\+Manager\+::init (\begin{DoxyParamCaption}\item[{int}]{\+\_\+port,  }\item[{int}]{ip\+\_\+protocol }\end{DoxyParamCaption})}
+
+Initiating socket 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+port} & The port of the server \\
+\hline
+{\em ip\+\_\+protocol} & Either I\+P\+P\+R\+O\+T\+O\+\_\+\+T\+CP $\vert$ I\+P\+P\+R\+O\+T\+O\+\_\+\+U\+DP \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 = done, -\/1 = error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetworkManager_a07057dcbe4af4740383384daf8289d5f}\label{classNetworkManager_a07057dcbe4af4740383384daf8289d5f}} 
+\index{NetworkManager@{NetworkManager}!receiveFrom@{receiveFrom}}
+\index{receiveFrom@{receiveFrom}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{receiveFrom()}{receiveFrom()}}
+{\footnotesize\ttfamily std\+::tuple$<$struct sockaddr $\ast$,char$\ast$, int$>$ Network\+Manager\+::receive\+From (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+U\+DP receive data \begin{DoxyReturn}{Returns}
+std\+::tuple$<$struct sockaddr $\ast$,char$\ast$, int$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetworkManager_a8c7c31a6fdbc5ed52f8d3bddf16a84e6}\label{classNetworkManager_a8c7c31a6fdbc5ed52f8d3bddf16a84e6}} 
+\index{NetworkManager@{NetworkManager}!sendTo@{sendTo}}
+\index{sendTo@{sendTo}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{sendTo()}{sendTo()}}
+{\footnotesize\ttfamily int Network\+Manager\+::send\+To (\begin{DoxyParamCaption}\item[{char}]{buff\mbox{[}\+B\+U\+F\+F\+\_\+\+L\+E\+N\mbox{]},  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+U\+DP send data 
+\begin{DoxyParams}{Parameters}
+{\em buff} & De taille B\+U\+F\+F\+\_\+\+L\+EN \\
+\hline
+{\em n} & size\+\_\+t the size of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the client(s) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetworkManager_a2d7ffe30427c533766b05ca568ffb125}\label{classNetworkManager_a2d7ffe30427c533766b05ca568ffb125}} 
+\index{NetworkManager@{NetworkManager}!setFd@{setFd}}
+\index{setFd@{setFd}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{setFd()}{setFd()}}
+{\footnotesize\ttfamily void Network\+Manager\+::set\+Fd (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+Returns the fs \begin{DoxyReturn}{Returns}
+the client(s) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetworkManager_aff763a02730b218f72f51a96a02f0dda}\label{classNetworkManager_aff763a02730b218f72f51a96a02f0dda}} 
+\index{NetworkManager@{NetworkManager}!setOther@{setOther}}
+\index{setOther@{setOther}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{setOther()}{setOther()}}
+{\footnotesize\ttfamily void Network\+Manager\+::set\+Other (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{NetworkManager_8hpp_a6a34800fb5689e853f978b485a41aa39}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}}}]{other }\end{DoxyParamCaption})}
+
+Set the sockaddr (not used ?) 
+\begin{DoxyParams}{Parameters}
+{\em other} & Sets the sockaddr$\ast$ \+\_\+other \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 = done, -\/1 = error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetworkManager_a5765a63a11c9b5ee4dfb1f264ca002eb}\label{classNetworkManager_a5765a63a11c9b5ee4dfb1f264ca002eb}} 
+\index{NetworkManager@{NetworkManager}!started@{started}}
+\index{started@{started}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{started()}{started()}}
+{\footnotesize\ttfamily int Network\+Manager\+::started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the state of the server. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNetworkManager_a1979812356b715646302bf188f74aff5}\label{classNetworkManager_a1979812356b715646302bf188f74aff5}} 
+\index{NetworkManager@{NetworkManager}!TCP\_Loop@{TCP\_Loop}}
+\index{TCP\_Loop@{TCP\_Loop}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{TCP\_Loop()}{TCP\_Loop()}}
+{\footnotesize\ttfamily int Network\+Manager\+::\+T\+C\+P\+\_\+\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function contains the main loop.~\newline
+ Is used to accept new \mbox{\hyperlink{classClient}{Client}}.~\newline
+ It also stores them in the \mbox{\hyperlink{classClient}{Client}} class.~\newline
+ And also reads/stores there messages in there.~\newline
+ (It is doing I/O but nothing else)~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+0 if ok, -\/1 if not ok 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classNetworkManager_a267bb2580a6c21a814971a8e74c4dc37}\label{classNetworkManager_a267bb2580a6c21a814971a8e74c4dc37}} 
+\index{NetworkManager@{NetworkManager}!\_clients@{\_clients}}
+\index{\_clients@{\_clients}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{\_clients}{\_clients}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classClient}{Client}}$>$ Network\+Manager\+::\+\_\+clients\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNetworkManager_af3fdb76b224890526f93952bbff33a9a}\label{classNetworkManager_af3fdb76b224890526f93952bbff33a9a}} 
+\index{NetworkManager@{NetworkManager}!\_fd@{\_fd}}
+\index{\_fd@{\_fd}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{\_fd}{\_fd}}
+{\footnotesize\ttfamily int Network\+Manager\+::\+\_\+fd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used in U\+DP. 
+
+\mbox{\Hypertarget{classNetworkManager_af8625dfbba34d3b7683fd6ccf1afb3aa}\label{classNetworkManager_af8625dfbba34d3b7683fd6ccf1afb3aa}} 
+\index{NetworkManager@{NetworkManager}!\_other@{\_other}}
+\index{\_other@{\_other}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{\_other}{\_other}}
+{\footnotesize\ttfamily \mbox{\hyperlink{NetworkManager_8hpp_a6a34800fb5689e853f978b485a41aa39}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}} Network\+Manager\+::\+\_\+other\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used in U\+DP. 
+
+\mbox{\Hypertarget{classNetworkManager_a63ace6e62f363661c718b17a738107dc}\label{classNetworkManager_a63ace6e62f363661c718b17a738107dc}} 
+\index{NetworkManager@{NetworkManager}!\_pipeline@{\_pipeline}}
+\index{\_pipeline@{\_pipeline}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{\_pipeline}{\_pipeline}}
+{\footnotesize\ttfamily o\+Z\+::\+Pipeline Network\+Manager\+::\+\_\+pipeline\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNetworkManager_aa2c4503597d1a64439912f20a9799ec3}\label{classNetworkManager_aa2c4503597d1a64439912f20a9799ec3}} 
+\index{NetworkManager@{NetworkManager}!\_protocol@{\_protocol}}
+\index{\_protocol@{\_protocol}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{\_protocol}{\_protocol}}
+{\footnotesize\ttfamily int Network\+Manager\+::\+\_\+protocol\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used to determine which protocol the server is in. 
+
+\mbox{\Hypertarget{classNetworkManager_acf160e0d3b59613ab6ff8084637a79ed}\label{classNetworkManager_acf160e0d3b59613ab6ff8084637a79ed}} 
+\index{NetworkManager@{NetworkManager}!\_started@{\_started}}
+\index{\_started@{\_started}!NetworkManager@{NetworkManager}}
+\subsubsection{\texorpdfstring{\_started}{\_started}}
+{\footnotesize\ttfamily int Network\+Manager\+::\+\_\+started\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Network/\mbox{\hyperlink{NetworkManager_8hpp}{Network\+Manager.\+hpp}}\item 
+Network/\mbox{\hyperlink{NetworkManager_8cpp}{Network\+Manager.\+cpp}}\end{DoxyCompactItemize}

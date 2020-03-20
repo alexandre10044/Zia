@@ -1,0 +1,21 @@
+/*! \mainpage Zia
+ *
+ * \section intro_sec Introduction
+ *
+ * Zia is a HTTP/1.1 API with interopables modules.
+ *
+ * \section modules_sec Modules
+ * <U>It's using 2 modules, which are :</U><BR>
+ * - ssl (secure connection module)
+ * - cgi (program execution module)
+ * \subsection step1 Step 1: Compiling the modules
+ *  cd ..<BR>
+ *  mkdir build<BR>
+ *  cd build<BR>
+ *  conan install .. --build=missing<BR>
+ *  cmake .. -G “Unix Makefiles”<BR>
+ *  cmake --build .<BR>
+ *  <B>OU</B><BR>
+ * ./scripts/build_project.sh<BR>
+ * \subsection step2 Step 2: Use them
+ */

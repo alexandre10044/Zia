@@ -1,0 +1,131 @@
+\hypertarget{classClient}{}\section{Client Class Reference}
+\label{classClient}\index{Client@{Client}}
+
+
+Class for the \mbox{\hyperlink{classNetworkManager}{Network\+Manager}} to store clients (T\+CP)  
+
+
+
+
+{\ttfamily \#include $<$Client.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classClient_af0ffba7d73ea07f7610d6b1a98fbc561}{Client}} (int fd)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classClient}{Client}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classClient_a840e519ca781888cbd54181572ebe3a7}{$\sim$\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classClient}{Client}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classClient_a0e8dd592f774d92c9f6e7ef17b979baa}{get\+Fd}} ()
+\begin{DoxyCompactList}\small\item\em Get the client Fd. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classClient_a4cbcf36b6641429d4b43788df6025f87}{pop\+Message}} ()
+\begin{DoxyCompactList}\small\item\em pops a new message from clients messages \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classClient_afa89bea9abcfcd83ba7fded09577fbbb}{push\+Message}} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Pushes a new message to the client queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classClient_a76a7d1bb0a940f1b180ac251b47e6cf4}{\+\_\+fd}}
+\begin{DoxyCompactList}\small\item\em The fd of the client. \end{DoxyCompactList}\item 
+std\+::queue$<$ std\+::string $>$ \mbox{\hyperlink{classClient_a5bbd57271ee0ee9a87a465621d1e669a}{\+\_\+messages}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for the \mbox{\hyperlink{classNetworkManager}{Network\+Manager}} to store clients (T\+CP) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classClient_af0ffba7d73ea07f7610d6b1a98fbc561}\label{classClient_af0ffba7d73ea07f7610d6b1a98fbc561}} 
+\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\subsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily Client\+::\+Client (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classClient}{Client}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classClient_a840e519ca781888cbd54181572ebe3a7}\label{classClient_a840e519ca781888cbd54181572ebe3a7}} 
+\index{Client@{Client}!````~Client@{$\sim$Client}}
+\index{````~Client@{$\sim$Client}!Client@{Client}}
+\subsubsection{\texorpdfstring{$\sim$Client()}{~Client()}}
+{\footnotesize\ttfamily Client\+::$\sim$\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{classClient}{Client}} object. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classClient_a0e8dd592f774d92c9f6e7ef17b979baa}\label{classClient_a0e8dd592f774d92c9f6e7ef17b979baa}} 
+\index{Client@{Client}!getFd@{getFd}}
+\index{getFd@{getFd}!Client@{Client}}
+\subsubsection{\texorpdfstring{getFd()}{getFd()}}
+{\footnotesize\ttfamily int Client\+::get\+Fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the client Fd. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClient_a4cbcf36b6641429d4b43788df6025f87}\label{classClient_a4cbcf36b6641429d4b43788df6025f87}} 
+\index{Client@{Client}!popMessage@{popMessage}}
+\index{popMessage@{popMessage}!Client@{Client}}
+\subsubsection{\texorpdfstring{popMessage()}{popMessage()}}
+{\footnotesize\ttfamily std\+::string Client\+::pop\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+pops a new message from clients messages 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClient_afa89bea9abcfcd83ba7fded09577fbbb}\label{classClient_afa89bea9abcfcd83ba7fded09577fbbb}} 
+\index{Client@{Client}!pushMessage@{pushMessage}}
+\index{pushMessage@{pushMessage}!Client@{Client}}
+\subsubsection{\texorpdfstring{pushMessage()}{pushMessage()}}
+{\footnotesize\ttfamily void Client\+::push\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})}
+
+
+
+Pushes a new message to the client queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message tu be pushed \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classClient_a76a7d1bb0a940f1b180ac251b47e6cf4}\label{classClient_a76a7d1bb0a940f1b180ac251b47e6cf4}} 
+\index{Client@{Client}!\_fd@{\_fd}}
+\index{\_fd@{\_fd}!Client@{Client}}
+\subsubsection{\texorpdfstring{\_fd}{\_fd}}
+{\footnotesize\ttfamily int Client\+::\+\_\+fd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The fd of the client. 
+
+\mbox{\Hypertarget{classClient_a5bbd57271ee0ee9a87a465621d1e669a}\label{classClient_a5bbd57271ee0ee9a87a465621d1e669a}} 
+\index{Client@{Client}!\_messages@{\_messages}}
+\index{\_messages@{\_messages}!Client@{Client}}
+\subsubsection{\texorpdfstring{\_messages}{\_messages}}
+{\footnotesize\ttfamily std\+::queue$<$std\+::string$>$ Client\+::\+\_\+messages\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Network/\+Client/\mbox{\hyperlink{Client_8hpp}{Client.\+hpp}}\item 
+Network/\+Client/\mbox{\hyperlink{Client_8cpp}{Client.\+cpp}}\end{DoxyCompactItemize}

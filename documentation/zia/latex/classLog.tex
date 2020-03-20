@@ -1,0 +1,119 @@
+\hypertarget{classLog}{}\section{Log Class Reference}
+\label{classLog}\index{Log@{Log}}
+
+
+{\ttfamily \#include $<$Logging.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classLog_ab03809956a91617a2a8debef16111824}{Console}} (std\+::string start\+Color, std\+::string message)
+\item 
+static void \mbox{\hyperlink{classLog_a0bb208257d7c4d2ef60a53ef6b4c1932}{Error}} (std\+::string start\+Color, std\+::string message)
+\item 
+static void \mbox{\hyperlink{classLog_a17f7b098fc056675e98a900f85c9c9ae}{Console}} (std\+::string start\+Color, std\+::string head, std\+::string message)
+\item 
+static void \mbox{\hyperlink{classLog_a32af45ac98fd45728edcab2c3405b3f7}{Error}} (std\+::string start\+Color, std\+::string head, std\+::string message)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLog_af6071a60aa52b6c1b511f99b4bc1b8fe}{Log}} ()
+\item 
+\mbox{\hyperlink{classLog_a0fbfda88fbee5027c89f6eb121059360}{$\sim$\+Log}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to log things in console 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLog_af6071a60aa52b6c1b511f99b4bc1b8fe}\label{classLog_af6071a60aa52b6c1b511f99b4bc1b8fe}} 
+\index{Log@{Log}!Log@{Log}}
+\index{Log@{Log}!Log@{Log}}
+\subsubsection{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily Log\+::\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLog_a0fbfda88fbee5027c89f6eb121059360}\label{classLog_a0fbfda88fbee5027c89f6eb121059360}} 
+\index{Log@{Log}!````~Log@{$\sim$Log}}
+\index{````~Log@{$\sim$Log}!Log@{Log}}
+\subsubsection{\texorpdfstring{$\sim$Log()}{~Log()}}
+{\footnotesize\ttfamily Log\+::$\sim$\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classLog_ab03809956a91617a2a8debef16111824}\label{classLog_ab03809956a91617a2a8debef16111824}} 
+\index{Log@{Log}!Console@{Console}}
+\index{Console@{Console}!Log@{Log}}
+\subsubsection{\texorpdfstring{Console()}{Console()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Log\+::\+Console (\begin{DoxyParamCaption}\item[{std\+::string}]{start\+Color,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Printing with color. 
+\begin{DoxyParams}{Parameters}
+{\em start\+Color} & The color for the text to be printed. \\
+\hline
+{\em message} & The message to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLog_a17f7b098fc056675e98a900f85c9c9ae}\label{classLog_a17f7b098fc056675e98a900f85c9c9ae}} 
+\index{Log@{Log}!Console@{Console}}
+\index{Console@{Console}!Log@{Log}}
+\subsubsection{\texorpdfstring{Console()}{Console()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Log\+::\+Console (\begin{DoxyParamCaption}\item[{std\+::string}]{start\+Color,  }\item[{std\+::string}]{head,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Printing with given color. 
+\begin{DoxyParams}{Parameters}
+{\em head} & The head of the message (\mbox{[}head\mbox{]}message) \\
+\hline
+{\em start\+Color} & The color for the text to be printed. \\
+\hline
+{\em message} & The message to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLog_a0bb208257d7c4d2ef60a53ef6b4c1932}\label{classLog_a0bb208257d7c4d2ef60a53ef6b4c1932}} 
+\index{Log@{Log}!Error@{Error}}
+\index{Error@{Error}!Log@{Log}}
+\subsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Log\+::\+Error (\begin{DoxyParamCaption}\item[{std\+::string}]{start\+Color,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Printing with red color. 
+\begin{DoxyParams}{Parameters}
+{\em start\+Color} & The color for the text to be printed. \\
+\hline
+{\em message} & The message to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLog_a32af45ac98fd45728edcab2c3405b3f7}\label{classLog_a32af45ac98fd45728edcab2c3405b3f7}} 
+\index{Log@{Log}!Error@{Error}}
+\index{Error@{Error}!Log@{Log}}
+\subsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Log\+::\+Error (\begin{DoxyParamCaption}\item[{std\+::string}]{start\+Color,  }\item[{std\+::string}]{head,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Printing with red color. 
+\begin{DoxyParams}{Parameters}
+{\em start\+Color} & The color for the text to be printed. \\
+\hline
+{\em head} & The head of the message (\mbox{[}head\mbox{]}message) \\
+\hline
+{\em message} & The message to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Logging/\mbox{\hyperlink{Logging_8hpp}{Logging.\+hpp}}\item 
+Logging/\mbox{\hyperlink{Logging_8cpp}{Logging.\+cpp}}\end{DoxyCompactItemize}

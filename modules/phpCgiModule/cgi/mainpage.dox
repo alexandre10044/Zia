@@ -1,0 +1,11 @@
+/*! \mainpage Zia
+ *
+ * \section intro_sec Introduction
+ *
+ * Zia is a HTTP/1.1 Server.
+ *
+ * \section modules_sec Modules
+ *
+ * \subsection step1 Step 1: Compiling the modules
+ * \subsection step2 Step 2: Use them
+ */

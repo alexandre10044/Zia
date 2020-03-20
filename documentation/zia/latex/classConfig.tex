@@ -1,0 +1,106 @@
+\hypertarget{classConfig}{}\section{Config Class Reference}
+\label{classConfig}\index{Config@{Config}}
+
+
+{\ttfamily \#include $<$Config.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classConfig_abd0c571c116924871e30444b192b792a}{Config}} ()
+\item 
+\mbox{\hyperlink{classConfig_a543dce59b66475c5108088ee4ce1cdfc}{$\sim$\+Config}} ()
+\item 
+int \mbox{\hyperlink{classConfig_a884554353ee78b567bf7870cd513a014}{read}} (std\+::string file)
+\item 
+void \mbox{\hyperlink{classConfig_a50f1975553317a337740bec3ea316f10}{print}} (std\+::string key=\char`\"{}\char`\"{})
+\item 
+std\+::string \mbox{\hyperlink{classConfig_a3c55d333e4f503cf0de93e6e4e229592}{get}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Get the selected key value in config read. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classConfig_ae490b81bf10ac9ac10f12fe35d4474a0}{config}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to parse config Comment \+: \#\# Value \+: key=value 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classConfig_abd0c571c116924871e30444b192b792a}\label{classConfig_abd0c571c116924871e30444b192b792a}} 
+\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\subsubsection{\texorpdfstring{Config()}{Config()}}
+{\footnotesize\ttfamily Config\+::\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classConfig_a543dce59b66475c5108088ee4ce1cdfc}\label{classConfig_a543dce59b66475c5108088ee4ce1cdfc}} 
+\index{Config@{Config}!````~Config@{$\sim$Config}}
+\index{````~Config@{$\sim$Config}!Config@{Config}}
+\subsubsection{\texorpdfstring{$\sim$Config()}{~Config()}}
+{\footnotesize\ttfamily Config\+::$\sim$\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classConfig_a3c55d333e4f503cf0de93e6e4e229592}\label{classConfig_a3c55d333e4f503cf0de93e6e4e229592}} 
+\index{Config@{Config}!get@{get}}
+\index{get@{get}!Config@{Config}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily std\+::string Config\+::get (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+
+
+Get the selected key value in config read. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConfig_a50f1975553317a337740bec3ea316f10}\label{classConfig_a50f1975553317a337740bec3ea316f10}} 
+\index{Config@{Config}!print@{print}}
+\index{print@{print}!Config@{Config}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Config\+::print (\begin{DoxyParamCaption}\item[{std\+::string}]{key = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Printing all or specific config key 
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConfig_a884554353ee78b567bf7870cd513a014}\label{classConfig_a884554353ee78b567bf7870cd513a014}} 
+\index{Config@{Config}!read@{read}}
+\index{read@{read}!Config@{Config}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int Config\+::read (\begin{DoxyParamCaption}\item[{std\+::string}]{file }\end{DoxyParamCaption})}
+
+Reading the config. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The config to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 \+: success, -\/1 \+: error 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classConfig_ae490b81bf10ac9ac10f12fe35d4474a0}\label{classConfig_ae490b81bf10ac9ac10f12fe35d4474a0}} 
+\index{Config@{Config}!config@{config}}
+\index{config@{config}!Config@{Config}}
+\subsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ Config\+::config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Config/\mbox{\hyperlink{Config_8hpp}{Config.\+hpp}}\item 
+Config/\mbox{\hyperlink{Config_8cpp}{Config.\+cpp}}\end{DoxyCompactItemize}

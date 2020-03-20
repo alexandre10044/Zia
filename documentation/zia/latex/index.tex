@@ -1,0 +1,17 @@
+\hypertarget{index_intro_sec}{}\section{Introduction}\label{index_intro_sec}
+Zia is a H\+T\+T\+P/1.\+1 A\+PI with interopables modules.\hypertarget{index_modules_sec}{}\section{Modules}\label{index_modules_sec}
+\uline{It\textquotesingle{}s using 2 modules, which are \+:}~\newline
+
+\begin{DoxyItemize}
+\item ssl (secure connection module)
+\item cgi (program execution module) 
+\end{DoxyItemize}\hypertarget{index_step1}{}\subsection{Step 1\+: Compiling the modules}\label{index_step1}
+cd ..~\newline
+ mkdir build~\newline
+ cd build~\newline
+ conan install .. --build=missing~\newline
+ cmake .. -\/G “\+Unix Makefiles”~\newline
+ cmake --build .~\newline
+ {\bfseries{OU}}~\newline
+ ./scripts/build\+\_\+project.sh~\newline
+ \hypertarget{index_step2}{}\subsection{Step 2\+: Use them}\label{index_step2}

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libhttpGet.so -o modules/libhttpGet.so CMakeFiles/httpGet.dir/modules/httpGet/httpGet.cpp.o  libopenZia.a -ldl -lstdc++fs 

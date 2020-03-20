@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libhttpParseRequest.so -o modules/libhttpParseRequest.so CMakeFiles/httpParseRequest.dir/modules/httpParseRequest/httpParseRequest.cpp.o  libopenZia.a -ldl -lstdc++fs 

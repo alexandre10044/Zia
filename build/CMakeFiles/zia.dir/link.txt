@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/zia.dir/zia/Config/Config.cpp.o CMakeFiles/zia.dir/zia/Logging/Logging.cpp.o CMakeFiles/zia.dir/zia/Network/NetworkManager.cpp.o CMakeFiles/zia.dir/zia/Network/Client/Client.cpp.o CMakeFiles/zia.dir/zia/main.cpp.o  -o zia  libopenZia.a -lpthread -ldl -lstdc++fs 
