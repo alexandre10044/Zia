@@ -16,7 +16,9 @@ These items will all be discussed in details below
 YourZia MUSTcompile and run on at least oneWindowsdistributionANDoneUnixdistribution.ItMUSTbe built using a [CMake] and dependenciesMUSTbe handled using [conan].These, and only these, conan repositories may be used:
 
 •conan-center:https://bintray.com/conan/conan-center
+
 •epitech:https://bintray.com/epitech/public-conan
+
 •bincrafters:https://bintray.com/bincrafters/public-conan
 
 The build of your project will be done in the following fashion (for Unix systems):∇Terminal-  +x∼/B-CPP-510> mkdir build && cd build && conan install .. --build=missing && cmake.. -G “Unix Makefiles” && cmake --build .
