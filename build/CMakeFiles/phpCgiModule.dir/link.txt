@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libphpCgiModule.so -o modules/libphpCgiModule.so CMakeFiles/phpCgiModule.dir/modules/phpCgiModule/Php.cpp.o  libopenZia.a -ldl -lstdc++fs 

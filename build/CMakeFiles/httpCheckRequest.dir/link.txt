@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libhttpCheckRequest.so -o modules/libhttpCheckRequest.so CMakeFiles/httpCheckRequest.dir/modules/httpCheckRequest/httpCheckRequest.cpp.o  libopenZia.a -ldl -lstdc++fs 

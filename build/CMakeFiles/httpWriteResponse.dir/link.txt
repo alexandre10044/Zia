@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libhttpWriteResponse.so -o modules/libhttpWriteResponse.so CMakeFiles/httpWriteResponse.dir/modules/httpWriteResponse/httpWriteResponse.cpp.o  libopenZia.a -ldl -lstdc++fs 

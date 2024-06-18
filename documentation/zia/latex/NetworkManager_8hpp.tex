@@ -1,0 +1,70 @@
+\hypertarget{NetworkManager_8hpp}{}\section{Network/\+Network\+Manager.hpp File Reference}
+\label{NetworkManager_8hpp}\index{Network/NetworkManager.hpp@{Network/NetworkManager.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}Client.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Logging.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Pipeline.\+hpp\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classNetworkManager}{Network\+Manager}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{NetworkManager_8hpp_a6ac7d11a56af31a55035980e2fed464a}{B\+U\+F\+F\+\_\+\+L\+EN}}~4096
+\begin{DoxyCompactList}\small\item\em Buffer length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct sockaddr\+\_\+in \mbox{\hyperlink{NetworkManager_8hpp_a6a34800fb5689e853f978b485a41aa39}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}}
+\begin{DoxyCompactList}\small\item\em Easier to write \char`\"{}struct sockaddr\+\_\+in\char`\"{}. \end{DoxyCompactList}\item 
+typedef struct sockaddr \mbox{\hyperlink{NetworkManager_8hpp_ac0856f266869bbd9a2db252b7692b984}{S\+O\+C\+K\+A\+D\+DR}}
+\begin{DoxyCompactList}\small\item\em Easier to write \char`\"{}struct sockaddr\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{NetworkManager_8hpp_a6ac7d11a56af31a55035980e2fed464a}\label{NetworkManager_8hpp_a6ac7d11a56af31a55035980e2fed464a}} 
+\index{NetworkManager.hpp@{NetworkManager.hpp}!BUFF\_LEN@{BUFF\_LEN}}
+\index{BUFF\_LEN@{BUFF\_LEN}!NetworkManager.hpp@{NetworkManager.hpp}}
+\subsubsection{\texorpdfstring{BUFF\_LEN}{BUFF\_LEN}}
+{\footnotesize\ttfamily \#define B\+U\+F\+F\+\_\+\+L\+EN~4096}
+
+
+
+Buffer length. 
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{NetworkManager_8hpp_ac0856f266869bbd9a2db252b7692b984}\label{NetworkManager_8hpp_ac0856f266869bbd9a2db252b7692b984}} 
+\index{NetworkManager.hpp@{NetworkManager.hpp}!SOCKADDR@{SOCKADDR}}
+\index{SOCKADDR@{SOCKADDR}!NetworkManager.hpp@{NetworkManager.hpp}}
+\subsubsection{\texorpdfstring{SOCKADDR}{SOCKADDR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{NetworkManager_8hpp_ac0856f266869bbd9a2db252b7692b984}{S\+O\+C\+K\+A\+D\+DR}}}
+
+
+
+Easier to write \char`\"{}struct sockaddr\char`\"{}. 
+
+\mbox{\Hypertarget{NetworkManager_8hpp_a6a34800fb5689e853f978b485a41aa39}\label{NetworkManager_8hpp_a6a34800fb5689e853f978b485a41aa39}} 
+\index{NetworkManager.hpp@{NetworkManager.hpp}!SOCKADDR\_IN@{SOCKADDR\_IN}}
+\index{SOCKADDR\_IN@{SOCKADDR\_IN}!NetworkManager.hpp@{NetworkManager.hpp}}
+\subsubsection{\texorpdfstring{SOCKADDR\_IN}{SOCKADDR\_IN}}
+{\footnotesize\ttfamily \mbox{\hyperlink{NetworkManager_8hpp_a6a34800fb5689e853f978b485a41aa39}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}}}
+
+
+
+Easier to write \char`\"{}struct sockaddr\+\_\+in\char`\"{}. 
+

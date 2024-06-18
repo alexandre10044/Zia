@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libhttpDelete.so -o modules/libhttpDelete.so CMakeFiles/httpDelete.dir/modules/httpDelete/httpDelete.cpp.o  libopenZia.a -ldl -lstdc++fs 
